@@ -18,6 +18,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func rollButtonPressed(_ sender: UIButton) {
+        
+        var randomDiceIndex1: Int = 0
+        var randomDiceIndex2: Int = 0
+        
+        randomDiceIndex1 = Int.random(in: 0...5)
+        randomDiceIndex2 = Int.random(in: 0...5)
+        
+    }
+    
 }
 
