@@ -21,6 +21,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func rollButtonPressed(_ sender: UIButton) {
+        updateDiceImages()
+    }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        updateDiceImages()
+    }
+    
+    func updateDiceImages() {
         
         let diceArray = ["dice1", "dice2", "dice3", "dice4", "dice5", "dice6"]
         
