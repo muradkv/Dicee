@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,15 +15,26 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dicee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="newbackground" translatesAutoresizingMaskIntoConstraints="NO" id="yOq-b7-XP0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newbackground" translatesAutoresizingMaskIntoConstraints="NO" id="yOq-b7-XP0">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jG5-KI-d86" userLabel="Top Container">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="283.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="3e6-n5-oD4">
+                                        <rect key="frame" x="89.5" y="78" width="196" height="128"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3e6-n5-oD4" firstAttribute="centerX" secondItem="jG5-KI-d86" secondAttribute="centerX" id="Wcz-Hv-LJV"/>
+                                    <constraint firstItem="3e6-n5-oD4" firstAttribute="centerY" secondItem="jG5-KI-d86" secondAttribute="centerY" id="gfQ-Ad-ojy"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJs-p8-ol3" userLabel="Middle Container">
-                                <rect key="frame" x="40" y="190" width="240" height="100"/>
+                                <rect key="frame" x="67.5" y="283.5" width="240" height="100"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="tnI-ZX-rgr">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -49,23 +60,11 @@
                                     <constraint firstAttribute="height" constant="100" id="wIX-A9-kSJ"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jG5-KI-d86" userLabel="Top Container">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diceeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="3e6-n5-oD4">
-                                        <rect key="frame" x="62" y="31" width="196" height="128"/>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="3e6-n5-oD4" firstAttribute="centerX" secondItem="jG5-KI-d86" secondAttribute="centerX" id="Wcz-Hv-LJV"/>
-                                    <constraint firstItem="3e6-n5-oD4" firstAttribute="centerY" secondItem="jG5-KI-d86" secondAttribute="centerY" id="gfQ-Ad-ojy"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ky6-UA-XUH" userLabel="Bottom Container">
-                                <rect key="frame" x="0.0" y="290" width="320" height="190"/>
+                                <rect key="frame" x="0.0" y="383.5" width="375" height="283.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooi-e8-EYj">
-                                        <rect key="frame" x="110" y="65.5" width="100" height="59"/>
+                                        <rect key="frame" x="137.5" y="112.5" width="100" height="59"/>
                                         <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="59" id="9af-4R-DbT"/>
@@ -92,8 +91,12 @@
                             <constraint firstItem="yJs-p8-ol3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8wI-D9-Vj8"/>
                             <constraint firstItem="jG5-KI-d86" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Alj-xe-nA1"/>
                             <constraint firstItem="yJs-p8-ol3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Cdz-dW-mn6"/>
+                            <constraint firstAttribute="trailing" secondItem="yOq-b7-XP0" secondAttribute="trailing" id="Kul-78-FIL"/>
+                            <constraint firstAttribute="bottom" secondItem="yOq-b7-XP0" secondAttribute="bottom" id="NU9-km-AEd"/>
+                            <constraint firstItem="yOq-b7-XP0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RDq-WN-Mep"/>
                             <constraint firstAttribute="bottom" secondItem="Ky6-UA-XUH" secondAttribute="bottom" id="TAA-3a-FG7"/>
                             <constraint firstItem="jG5-KI-d86" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bfQ-xP-0nK"/>
+                            <constraint firstItem="yOq-b7-XP0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fmw-mk-92S"/>
                             <constraint firstItem="jG5-KI-d86" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iDf-nb-Lkc"/>
                             <constraint firstItem="Ky6-UA-XUH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jvd-ev-lOp"/>
                             <constraint firstItem="Ky6-UA-XUH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kXc-Eo-AOX"/>
